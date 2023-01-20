@@ -9,6 +9,13 @@ public class StringInfo {
     StringInfo() {
         System.out.println("Write your full name! (first name & last name)");
         String name = fetch.nextLine();
+        System.out.println("----------");
+        String[] validityChecker = name.split(" ");
+        if (validityChecker.length != 2){
+            System.out.println("only accepts one first name and one last name! sowwy :(");
+            System.exit(0);
+        }
+
 
         System.out.print("Length of your name: ");
         for (int i = 0; i < name.length(); i++) {
